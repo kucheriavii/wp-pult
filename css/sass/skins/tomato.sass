@@ -4,6 +4,7 @@ $color: #FF6347 //Theme skin
 $text_color: #888
 $main_color: #222
 $bg_light: #FAFAFA
+$logo_color: #e4e4e4
 
 @mixin kerning($kerning)
 	letter-spacing: $kerning + px
@@ -14,7 +15,9 @@ body
 a
 	color: $color
 
-p
+p,
+body .main-footer,
+.s-about li
 	color: $text_color
 
 .color_element
@@ -25,3 +28,59 @@ p
 	border-color: $color
 .main-color-bg
 	background-color: $main_color
+path
+	fill: $logo_color
+.bg-light
+	background-color: $bg_light
+.bg-dark
+	background-color: $main_color
+	color: #fff
+	.s-descr
+		&::after
+			background-color: #fff
+	a
+		color: #fff
+.top-mnu
+	a:hover
+		color: $color
+		background-color: rgba(255,255,255,.1)
+		transition: background 0.5s
+	a
+		+kerning(3)
+.top-text
+	p
+		color: $bg_light
+		+kerning(5)
+.s-descr
+	+kerning(3)
+	&::after
+		background-color: $main_color
+.main-footer
+	+kerning(0)
+
+section
+	h3
+		+kerning(3)
+		color: $text_color
+.s-about
+	p:nth-child(even)
+		color: $color
+.resume-container
+	h3
+		color: $main_color
+		+kerning(2)
+		font-size: 16px
+		font-weight: 400
+
+.resume-icon
+.resume-item	
+	.year
+		background-color: $color
+	.resume-description
+		+kerning(1)
+.s-portfolio
+	li
+		+kerning(2)
+		color: $text_color
+	.active
+		color: #fff

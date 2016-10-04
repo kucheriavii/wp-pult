@@ -7,17 +7,28 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+	.personal-last-block{
+		margin-top: 55px;
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+	.resume-container .left, 
+	.resume-container .left h3,
+	.container .resume-container .resume-icon{
+		text-align: left;
+		margin-bottom: 10px
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.top-wrapper h1{
+		font-size: 2em !important;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 /* Custom, iPhone Retina */
