@@ -1,26 +1,42 @@
 <?php get_header();?>
 	<section id="about" class="s-about bg-light">
 		<div class="section-header">	
-			<h2>About me</h2>
+			<h2><?php echo get_cat_name(2); ?></h2>
 			<div class="s-descr-wrap">
-				<div class="s-descr">Let us meet close</div>
+				<div class="s-descr"><?php echo category_description(2); ?></div>
 			</div>
 		</div>
 		<div class="section-content">
 			<div class="container">
 				<div class="row">
+					<?php 
+						if (have_posts()) : query_posts('p=5');	
+						while (have_posts()):the_post();
+					?>
+
+					
+					
+					
+
 					<div class="col-md-4 col-md-push-4">
 						<h3>Photo</h3>
 						<div class="person animation-1">
-							<a href="img/photo.jpg" class="popup"><img src="img/photo.jpg" alt="Alt"></a>
+							<?php if (has_post_thumbnail()) : ?>
+							<a class="popup" href="<?php 
+								echo wp_get_attachment_image_src( get_post_thumbnail_id(),'large' )[0];
+							 ?>" title="<?php the_title_attribute(); ?>">
+								<?php the_post_thumbnail(); ?>
+							</a>
+								<?php endif; ?>
 						</div>
 					</div>
 
 					<div class="col-md-4 col-md-pull-4 animation-2">
-						<h3>Something about me</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ut corrupti nostrum aut voluptatibus blanditiis, provident cupiditate, libero iure deleniti vero consectetur nisi illum odio necessitatibus unde tenetur doloremque saepe.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo aspernatur dicta, dolore, enim eligendi magnam magni laborum. Vitae doloremque impedit, porro consequuntur numquam dolores maxime suscipit dolor id ducimus delectus expedita, eligendi iusto, modi et nesciunt itaque aut inventore laudantium quod! Nam eum eos sunt fuga, repellendus dolores, illum ullam facilis autem hic ipsa veniam? Dicta ratione aliquid ad enim officia quidem maiores blanditiis delectus quae sunt laudantium accusantium eligendi, impedit, porro voluptatum modi quia.</p>
+						<h3><?php the_title(); ?></h3>
+						<?php the_content(); ?>
 					</div>
+					 <?php endwhile; endif; wp_reset_query();?>
+					 
 					
 					<div class="col-md-4 animation-3 personal-last-block">
 						<h3>Personal information</h3>
@@ -368,23 +384,4 @@
 		</div>
 	</section>
 	<?php get_footer(); ?>
-	<div class="hidden"></div>
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
-	<script src="libs/jquery/jquery-2.1.3.min.js"></script>
-	<script src="libs/parallax/parallax.min.js"></script>
-	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="libs/animate/animate-css.js"></script>
-	<script src="libs/mixitup/mixitup.min.js"></script>
-	<script src="libs/pagescrolltoid/PageScroll2id.min.js"></script>
-	<script src="libs/waypoints/waypoints.min.js"></script>
-	<script src="libs/bootstrapValidation/jqBootstrapValidation.js"></script>
-	<script src="js/common.js"></script>
-	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
-</body>
-</html>
+	
