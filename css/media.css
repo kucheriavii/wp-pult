@@ -29,6 +29,24 @@
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+	.main-footer{
+		text-align: center;
+	}
+	.main-footer .social-wrap{
+		margin-top: 20px;
+	    padding-left: 0;
+	    margin: 20px auto;
+	    width: 100%;
+	} 
+	.main-footer .social-wrap ul{
+		padding-left: 0;
+	}
+	.port-descr{
+		width: 100%;
+	}
+	.mfp-inline-holder .mfp-content{
+		width: 100%;
+	}
 }
 
 /* Custom, iPhone Retina */

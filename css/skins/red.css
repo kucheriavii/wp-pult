@@ -3,7 +3,7 @@ body {
   letter-spacing: 1px; }
 
 a {
-  color: #FF6347; }
+  color: #FF2211; }
 
 p,
 body .main-footer,
@@ -11,13 +11,13 @@ body .main-footer,
   color: #888; }
 
 .color_element {
-  color: #FF6347; }
+  color: #FF2211; }
 
 .color_bg {
-  background-color: #FF6347; }
+  background-color: #FF2211; }
 
 .color_border {
-  border-color: #FF6347; }
+  border-color: #FF2211; }
 
 .main-color-bg {
   background-color: #222; }
@@ -37,7 +37,7 @@ path {
     color: #fff; }
 
 .top-mnu a:hover {
-  color: #FF6347;
+  color: #FF2211;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background 0.5s; }
 .top-mnu a {
@@ -60,7 +60,7 @@ section h3 {
   color: #888; }
 
 .s-about p:nth-child(even) {
-  color: #FF6347; }
+  color: #FF2211; }
 
 .resume-container h3 {
   color: #222;
@@ -69,7 +69,7 @@ section h3 {
   font-weight: 400; }
 
 .resume-item .year {
-  background-color: #FF6347; }
+  background-color: #FF2211; }
 .resume-item .resume-description {
   letter-spacing: 1px; }
 
@@ -78,37 +78,37 @@ section h3 {
   color: #888; }
 .s-portfolio .active {
   color: #fff;
-  border-bottom: 1px solid #FF6347; }
+  border-bottom: 1px solid #FF2211; }
 
 .portfolio-item .port-item-cont a {
-  border-color: #FF6347;
-  color: #FF6347;
+  border-color: #FF2211;
+  color: #FF2211;
   display: inline-block; }
 
 .main-footer a {
-  color: #FF6347; }
+  color: #FF2211; }
 
 .contact_icon {
-  color: #FF6347; }
+  color: #FF2211; }
 
 .text-danger {
-  color: #FF6347; }
+  color: #FF2211; }
 
 form input:focus,
 form textarea:focus {
-  border: 2px solid #FF6347;
+  border: 2px solid #FF2211;
   box-shadow: none;
   letter-spacing: 2px; }
 form input,
 form textarea {
-  border: 1px solid #FF6347;
+  border: 1px solid #FF2211;
   box-shadow: 30px 30px 30px #fff;
   letter-spacing: 2px; }
 form button {
-  background-color: #FF6347;
+  background-color: #FF2211;
   letter-spacing: 2px; }
 form .form-group {
   letter-spacing: 2px;
   color: #888; }
 
-/*# sourceMappingURL=tomato.css.map */
+/*# sourceMappingURL=red.css.map */

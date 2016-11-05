@@ -253,6 +253,11 @@ svg {
   padding: 50px 0;
   font-style: 13px;
   font-weight: 300; }
+  .main-footer .social-wrap {
+    float: right;
+    line-height: 0; }
+    .main-footer .social-wrap ul {
+      margin: 0; }
 
 .person {
   text-align: center;
@@ -333,9 +338,101 @@ svg {
   display: inline-block;
   margin: 0 20px;
   text-transform: uppercase;
-  font-size: 12px; }
+  font-size: 12px;
+  line-height: 1.8; }
 .s-portfolio ul {
   margin-bottom: 50px;
   cursor: pointer; }
+
+.portfolio-item {
+  display: none;
+  padding: 0; }
+  .portfolio-item img {
+    width: 100%; }
+  .portfolio-item .port-item-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 15%;
+    opacity: 0;
+    transition: all 0.55s; }
+    .portfolio-item .port-item-cont h3 {
+      color: #fff;
+      margin-bottom: 0; }
+    .portfolio-item .port-item-cont a {
+      background-color: transparent;
+      border: #fff 1px solid;
+      padding: 2px 10px;
+      display: block; }
+  .portfolio-item:hover .port-item-cont {
+    opacity: 1;
+    padding-top: 20%; }
+
+.port-descr {
+  background-color: #fff;
+  width: 500px;
+  margin: auto; }
+  .port-descr p,
+  .port-descr h3 {
+    padding: 20px;
+    padding-bottom: 0px; }
+  .port-descr h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 20px; }
+  .port-descr p {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 5px; }
+  .port-descr img {
+    width: 100%;
+    margin-top: 10px; }
+
+.mfp-inline-holder .mfp-content {
+  width: 500px; }
+  .mfp-inline-holder .mfp-content button {
+    padding-top: 21px; }
+
+.contact-box {
+  margin-bottom: 30px; }
+  .contact-box h3 {
+    text-align: left;
+    clear: #000;
+    margin-bottom: 0px;
+    font-size: 14px; }
+  .contact-box .contact_icon {
+    font-size: 40px; }
+  .contact-box p {
+    margin-top: 5px; }
+
+.main-form button {
+  border: none;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 25px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 15px;
+  float: right; }
+
+.form-group {
+  display: block;
+  margin-bottom: 25px; }
+  .form-group input,
+  .form-group textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    line-height: 38px;
+    text-indent: 15px;
+    font-size: 12px; }
 
 /*# sourceMappingURL=main.css.map */
