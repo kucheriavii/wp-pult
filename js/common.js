@@ -9,7 +9,7 @@ $(document).ready(function() {
 		$(".s-portfolio li").removeClass("active");
 		$(this).addClass("active");
 	})
-	$('.main-head').parallax({imageSrc: 'http://wlen.test/wp-content/themes/lesson/img/bg.jpg'});
+	$('.main-head').parallax({imageSrc: 'http://wordpress.test/wp-content/themes/wlen/img/bg.jpg'});
 	$(".top-text h1").animated("fadeInDown","fadeOutUp")
 	$(".top-text p, .section-header").animated("fadeInUp","fadeOutDown")
 	$('.popup').magnificPopup({type:'image'})

@@ -28,4 +28,35 @@
 
 	require_once (get_stylesheet_directory()."./theme-options.php");
 	add_theme_support( 'post-thumbnails' ); 
- ?>
+
+	//configure admin-menu
+	function menu_styling(){
+		global $menu;
+		$restricted = array(
+			__('Tools'),
+			__('Media'),
+			__('Comments'),
+			__('Links'),
+			__('Posts')
+			);
+		end ($menu);
+		while(prev($menu)){
+			$value = explode(' ', $menu[key($menu)][0]);
+			//print_r($menu[key($menu)]);
+			if(in_array($value[0] !=NULL ? $value[0]:"", $restricted)){
+				unset($menu[key($menu)]);
+			}	
+		}
+	}
+	add_action('admin_menu', 'menu_styling');
+
+
+
+	add_action('admin_menu', function(){
+		add_menu_page( 'Дополнительные настройки сайта', 'Пульт', 'manage_options', 'site-options', 'add_my_setting', '', 4 ); 
+	});
+	function add_my_setting(){
+		require_once("pult.php");
+	}
+
+?>

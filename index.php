@@ -10,14 +10,9 @@
 			<div class="container">
 				<div class="row">
 					<?php 
-						if (have_posts()) : query_posts('p=5');	
+						if (have_posts()) : query_posts('p=4');	
 						while (have_posts()):the_post();
 					?>
-
-					
-					
-					
-
 					<div class="col-md-4 col-md-push-4">
 						<h3>Photo</h3>
 						<div class="person animation-1">
@@ -39,21 +34,21 @@
 					 
 					
 					<div class="col-md-4 animation-3 personal-last-block">
-						<h3>Personal information</h3>
-						<h2 class="personal-header">Roman Kucheriavii</h2>
-						<ul>
-							<li>Professional creating of sites. Development. HTML murkup. CMS apaptation.</li>
-							<li>Born: July, 3 1988</li>
-							<li>Phone: +38 033 666 88 77</li>
-							<li>E-mail: <a href="mailto:'yourmail@mail.mail'">Mail</a></li>
-							<li>E-mail: <a href="www.website.com">Website</a></li>
-						</ul>
+					<?php 
+						if (have_posts()) : query_posts('p=7');	
+						while (have_posts()):the_post();
+					?>
+						<h2 class="personal-header"><?php the_title(); ?></h2>
+						<?php the_content(); ?>
+					<?php endwhile; endif; wp_reset_query();?>
 						<div class="social-wrap">
 							<ul>
-								<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fa fa-vk"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>
+							<?php 
+								if (have_posts()) : query_posts('cat=3');	
+								while (have_posts()):the_post();
+							?>
+								<li><a href=<?php echo get_post_meta($post->ID,"url-link",true); ?> target="_blank"><i class="fa <?php echo get_post_meta($post->ID,"style",true); ?>"></i></a></li>
+							<?php endwhile; endif; wp_reset_query();?>
 							</ul>
 						</div>
 					</div>
