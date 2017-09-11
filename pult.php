@@ -7,6 +7,7 @@
 		window.onload = function(){
 			var input_left_about_us = document.getElementsByClassName('left_col_value');
 			var lcn = input_left_about_us;
+			
 			for(i=0;i<lcn.length;i++){
 				lcn[i].setAttribute('disabled','disabled');
 	
@@ -38,9 +39,9 @@
 		wp_update_post($post_right);
 	}
 
- 	$left_post_title = get_post(4);
+ 	$left_post_title = get_post(4); //вибираємо необхідний пост
  	$left_post_title = $left_post_title->post_title;
- 	$right_post_title = get_post(7);
+ 	$right_post_title = get_post(7); //вибираємо необхідний пост
  	$right_post_title = $right_post_title->post_title;
 	 ?>
 	 <h2>ОБО МНЕ</h2>

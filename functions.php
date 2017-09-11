@@ -29,7 +29,7 @@
 	require_once (get_stylesheet_directory()."./theme-options.php");
 	add_theme_support( 'post-thumbnails' ); 
 
-	//configure admin-menu
+	//configure admin-menu. Видаляємо зайві пункти меню
 	function menu_styling(){
 		global $menu;
 		$restricted = array(
@@ -48,13 +48,15 @@
 			}	
 		}
 	}
+
 	add_action('admin_menu', 'menu_styling');
+	//Кінець функції
 
-
-
+	//Добавляємо кнопку "Пульт" на яку вішаємо функцію add_my_setting()
 	add_action('admin_menu', function(){
 		add_menu_page( 'Дополнительные настройки сайта', 'Пульт', 'manage_options', 'site-options', 'add_my_setting', '', 4 ); 
 	});
+	//Функція - дивитися pult.php
 	function add_my_setting(){
 		require_once("pult.php");
 	}
